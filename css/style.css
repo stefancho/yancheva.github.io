@@ -1,0 +1,118 @@
+:root {
+  --primary-color: rgb(228, 143, 7);
+  --site-width: 75%;
+  --light-gray: rgb(243, 243, 243);
+  --darker-gray: gainsboro;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+
+section
+{
+  width: var(--site-width);
+}
+
+
+header a img
+{
+   height: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  height: 50px;
+}
+
+@font-face {
+  font-family: 'Gentium';
+  src: url('../fonts/Gentium_Plus/GentiumPlus-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish_PT_Sans/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+}
+
+
+.heading
+{
+  font-family: 'Gentium', serif;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.1em;
+}
+
+header{
+  background-color: var(--primary-color);
+}
+
+nav a {
+  font-family: 'Gentium', Arial, Helvetica, sans-serif;
+  font-size: 0.7em;
+  /* font-style: italic; */
+  color: white;
+  margin-left: 12px;
+}
+
+
+div.intro
+{
+  display: flex;
+}
+
+.panel
+{
+  border: 1px solid var(--darker-gray);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#about
+{
+  background-color: var(--light-gray);
+}
+
+.panel-body
+{
+  border: 1px solid var(--darker-gray);
+  background-color: white;
+}
+
+.panel-body img
+{
+  width: 400px;
+  height: auto;
+  float: left;
+  padding-right: 7px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.bold
+{
+  font-weight: bold;
+}
