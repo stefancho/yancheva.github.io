@@ -36,6 +36,53 @@ header {
   height: 50px;
 }
 
+/* Галерия */
+
+#gallery
+{
+  width: 100vw;
+  background-color: var(--light-gray);
+}
+
+#images
+{
+  display: flex;
+}
+
+#images img
+{
+  height: 250px;
+}
+
+#modal-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-view img {
+  /* max-height: 100%;
+  max-width: 100%; */
+  width: 500px;
+  height: 300px;
+}
+
+#modal-view.hidden
+{
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: 'Gentium';
   src: url('../fonts/Gentium_Plus/GentiumPlus-Regular.ttf');
@@ -105,11 +152,6 @@ div.intro
   padding-right: 7px;
   padding-bottom: 2px;
   box-sizing: border-box;
-}
-
-.hidden
-{
-  display: none;
 }
 
 .bold
