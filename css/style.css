@@ -2,6 +2,8 @@
   --primary-color: rgb(228, 143, 7);
   --site-width: 75%;
   --light-gray: rgb(243, 243, 243);
+  --nav-active-color: rgb(204, 127, 4);
+  --nav-hover-color: rgb(241, 225, 199);
   --darker-gray: gainsboro;
 }
 
@@ -22,7 +24,27 @@ section
   width: var(--site-width);
 }
 
+@font-face {
+  font-family: 'Gentium';
+  src: url('../fonts/Gentium_Plus/GentiumPlus-Regular.ttf');
+}
 
+@font-face {
+  font-family: 'Mulish';
+  src: url('../fonts/Mulish_PT_Sans/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+}
+
+
+.heading
+{
+  font-family: 'Gentium', serif;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.1em;
+  margin-top: 60px;
+}
+
+/* The logo */
 header a img
 {
    height: 50px;
@@ -36,7 +58,7 @@ header {
   height: 50px;
 }
 
-/* Галерия */
+/* Gallery */
 
 #gallery
 {
@@ -83,30 +105,17 @@ header {
   overflow: hidden;
 }
 
-@font-face {
-  font-family: 'Gentium';
-  src: url('../fonts/Gentium_Plus/GentiumPlus-Regular.ttf');
-}
 
-@font-face {
-  font-family: 'Mulish';
-  src: url('../fonts/Mulish_PT_Sans/Mulish/Mulish-Italic-VariableFont_wght.ttf');
-}
-
-
-.heading
-{
-  font-family: 'Gentium', serif;
-  text-align: center;
-  color: var(--primary-color);
-  font-size: 2.1em;
-}
-
-header{
+/* Main menu */
+ header{
+  z-index: 10000;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
   background-color: var(--primary-color);
-}
+} 
 
-nav a {
+nav > a {
   font-family: 'Gentium', Arial, Helvetica, sans-serif;
   font-size: 0.7em;
   /* font-style: italic; */
@@ -114,23 +123,38 @@ nav a {
   margin-left: 12px;
 }
 
+nav > a:hover {
+  color: var(--nav-hover-color);
+}
 
+nav > a.active
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  background-color: var(--nav-active-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Intro pic */
 div.intro
 {
   display: flex;
 }
 
+/* Problems */
 .panel
 {
   border: 1px solid var(--darker-gray);
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
-}
-
-.h1, .h2, .h3, h1, h2, h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 #about
