@@ -30,14 +30,14 @@ section
 
 @font-face {
   font-family: 'Mulish';
-  src: url('../fonts/Mulish_PT_Sans/Mulish/Mulish-Italic-VariableFont_wght.ttf');
+  src: url('../fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 100 700;
-  src: url(../fonts/Material/material.woff2) format('woff2');
+  src: url('../fonts/Material/material.woff2') format('woff2');
 }
 
 .material-symbols-outlined {
