@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	font-family: "Mulish", sans;
+	/* font-size: 0.7em; */
 	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,9 +52,35 @@ table {
 a
 {
 	text-decoration: none;
+	color: black;
 }
 
-.h1, .h2, .h3, h1, h2, h3 {
-	margin-top: 20px;
+a:hover
+{
+	color:dimgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--primary-color);
+	margin-top: 10px;
 	margin-bottom: 10px;
-  }
+}
+h6 {
+	font-size: 1.1em;
+}
+h5 {
+	font-size: 1.3em;
+}
+h4 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.7em;
+}
+h2 {
+	font-size: 1.9em;
+}
+h1 {
+	font-size: 2.1em;
+}
+

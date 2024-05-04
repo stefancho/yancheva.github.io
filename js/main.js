@@ -7,21 +7,15 @@ for (panel of panels) {
 
 function showHidePanel(event)
 {
+    event.preventDefault();
     const constainerDiv = event.target.closest('.problem')
     const panelDiv = constainerDiv.querySelector('.panel-body')
     panelDiv.classList.toggle("hidden");
+    const iconButtons = constainerDiv.querySelectorAll(".material-symbols-outlined");
+    for (const btnIcon of iconButtons) {
+        btnIcon.classList.toggle('hidden');
+    }
 }
-
-
-// let intro_section = document.querySelector('#intro');
-// let about_section = document.querySelector('#about');
-// let therapy_section = document.querySelector('#therapy');
-// let footer = document.querySelector('footer');
-
-// console.log(intro_section);
-// console.log(about_section.offsetTop);
-// console.log(therapy_section.offsetTop);
-// console.log(footer.offsetTop);
 
 // Main menu navigation
 let currentActive = 0;
@@ -30,10 +24,10 @@ for (const buttonLink of mainLinks) {
     buttonLink.addEventListener('click', mainMenuClick);
 }
 
+lastScrollY = 0;
 NAV_HEIGHT = 50;
 const topLevelElems = Array.from(document.querySelector('main').children);
 topLevelElems.push(document.querySelector('footer'));
-console.log(topLevelElems);
 
 function mainMenuClick(e)
 {
@@ -49,33 +43,41 @@ function mainMenuClick(e)
     }
     else
     {
-        window.scrollTo(0, 1);
+        window.scrollTo(0, 0);
     }
-
-    // mainLinks[currentActive].classList.remove('active');
-    // clickedLink.classList.add('active');
-    // currentActive = Array.from(mainLinks).indexOf(clickedLink);
 }
 
 window.addEventListener('scroll', detectScroll);
 
 function isWithin(element, threshold) { 
-    console.log(threshold);
-    console.log(element.offsetTop, element.offsetHeight);
     return element.offsetTop <= threshold && element.offsetTop + element.offsetHeight > threshold;
 } 
 
 function detectScroll()
 {
-    const visibleThreshold = (window.scrollY || window.pageYOffSet) + NAV_HEIGHT;
-    if(currentActive > 0 && isWithin(topLevelElems[currentActive - 1], visibleThreshold))
+    const scrollY = (window.scrollY || window.pageYOffSet) !== undefined ? (window.scrollY || window.pageYOffSet) : 0;
+    const visibleThreshold = scrollY + NAV_HEIGHT;
+    // console.log(visibleThreshold);
+
+    const prevActiveSection = currentActive;
+    const sameSection = isWithin(topLevelElems[currentActive], visibleThreshold);
+    const upScroll = (scrollY - lastScrollY) < 0;
+    if(upScroll && !sameSection)
     {
-        mainLinks[currentActive--].classList.remove('active');
+        // Search for the active section
+        while(!isWithin(topLevelElems[currentActive], visibleThreshold))
+            currentActive--;
+        mainLinks[prevActiveSection].classList.remove('active');
         mainLinks[currentActive].classList.add('active');
     }
-    else if(isWithin(topLevelElems[currentActive + 1], visibleThreshold))
+    else if(!upScroll && !sameSection)
     {
-        mainLinks[currentActive++].classList.remove('active');
+        // Search for the active section
+        while(!isWithin(topLevelElems[currentActive], visibleThreshold))
+            currentActive++;
+        mainLinks[prevActiveSection].classList.remove('active');
         mainLinks[currentActive].classList.add('active');
     }
+
+    lastScrollY = scrollY;
 }
