@@ -23,6 +23,16 @@ section
   width: var(--site-width);
 }
 
+.centered-txt
+{
+  text-align: center;
+}
+
+.heading-font
+{
+  font-family: 'Gentium', serif;
+}
+
 @font-face {
   font-family: 'Gentium';
   src: url('../fonts/Gentium_Plus/GentiumPlus-Regular.ttf');
@@ -58,9 +68,6 @@ section
 
 .heading
 {
-  font-family: 'Gentium', serif;
-  text-align: center;
-  color: var(--primary-color);
   margin-bottom: 25px;
 }
 
@@ -100,11 +107,21 @@ header {
 #images
 {
   display: flex;
+  margin: 20px 20px 20px 20px ;
+  justify-content: center;
+  align-items: center;
 }
 
-#images img
+#images a
 {
-  height: 250px;
+  margin-left: 10px;
+  flex-grow: 1;
+  width: 0px;
+}
+
+#images > a > img
+{
+  width: 100%;
 }
 
 #modal-view {
@@ -269,6 +286,13 @@ div.intro > div
 {
   color: var(--primary-color);
 }
+
+.white-text
+{
+  color: white;
+}
+
+.pointer {cursor: pointer;}
 
 .hidden
 {
