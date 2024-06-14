@@ -5,7 +5,7 @@
   --nav-active-color: rgb(204, 127, 4);
   --nav-hover-color: rgb(241, 225, 199);
   --darker-gray: gainsboro;
-  --header-color:#2ec4b6;
+  --nav-height: 55px;
 }
 
 body {
@@ -93,14 +93,7 @@ section
 /* The logo */
 header a img
 {
-   height: 50px;
-}
-
-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 55px;
+   height: var(--nav-height);
 }
 
 /* Gallery */
@@ -159,9 +152,13 @@ header {
   overflow: hidden;
 }
 
-
 /* Main menu */
  header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: var(--nav-height);
+
   z-index: 10000;
   position: fixed;
   width: 100vw;
@@ -190,6 +187,13 @@ nav > a.active
   background-color: var(--nav-active-color);
 }
 
+/* Drop down menu */
+.dropdown
+{
+  position: fixed;
+  top: var(--nav-height);
+}
+
 @media (prefers-reduced-motion: reduce) {
   
   html {
@@ -205,7 +209,7 @@ nav > a.active
 div.intro
 {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: var(--nav-height);
 } 
 
 div.intro > div
