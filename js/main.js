@@ -25,7 +25,7 @@ for (const buttonLink of mainLinks) {
 }
 
 lastScrollY = 0;
-NAV_HEIGHT = 50;
+NAV_HEIGHT = 55;
 const topLevelElems = Array.from(document.querySelector('main').children);
 topLevelElems.push(document.querySelector('footer'));
 
@@ -50,6 +50,8 @@ function mainMenuClick(e)
 window.addEventListener('scroll', detectScroll);
 
 function isWithin(element, threshold) { 
+    console.log('iswithin');
+    console.log(element, currentActive);
     return element.offsetTop <= threshold && element.offsetTop + element.offsetHeight > threshold;
 } 
 
@@ -57,10 +59,11 @@ function detectScroll()
 {
     const scrollY = (window.scrollY || window.pageYOffSet) !== undefined ? (window.scrollY || window.pageYOffSet) : 0;
     const visibleThreshold = scrollY + NAV_HEIGHT;
-    // console.log(visibleThreshold);
+    console.log("threshold",visibleThreshold);
 
     const prevActiveSection = currentActive;
     const sameSection = isWithin(topLevelElems[currentActive], visibleThreshold);
+    console.log("samesection", sameSection);
     const upScroll = (scrollY - lastScrollY) < 0;
     if(upScroll && !sameSection)
     {
