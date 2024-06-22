@@ -7,6 +7,7 @@
     <title>Елена Бобева - </title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/main.js" defer></script>
     <script src="./js/photo-list.js" defer></script>
@@ -16,28 +17,30 @@
 <body>
 
     <header>
-        <a href="/">
-            <img src="/images/logo.png" alt="Елена Бобева">
-        </a>
+        <div>
 
-        <nav>
+            <img src="/images/logo.png" alt="Елена Бобева">
+
+            <nav>
+                <a href="#" class="active">Начало</a>
+                <a href="#about">За мен</a>
+                <a href="#therapy">Терапия</a>
+                <a href="#gallery">Галерия</a>
+                <a href="#">Публикации</a>
+                <a href="#footer">Контакти</a>
+            </nav>
+            <span id="dropdown" class="material-symbols-outlined">menu</span>
+        </div>
+
+        <div class="dropdown hidden">
             <a href="#" class="active">Начало</a>
             <a href="#about">За мен</a>
             <a href="#therapy">Терапия</a>
             <a href="#gallery">Галерия</a>
             <a href="#">Публикации</a>
             <a href="#footer">Контакти</a>
-        </nav>
+        </div>
     </header>
-
-    <div class="dropdown">
-        <a href="#" class="active">Начало</a>
-        <a href="#about">За мен</a>
-        <a href="#therapy">Терапия</a>
-        <a href="#gallery">Галерия</a>
-        <a href="#">Публикации</a>
-        <a href="#footer">Контакти</a>
-    </div>
 
 
     <main>

@@ -25,7 +25,7 @@ for (const buttonLink of mainLinks) {
 }
 
 lastScrollY = 0;
-NAV_HEIGHT = 55;
+NAV_HEIGHT = 60;
 const topLevelElems = Array.from(document.querySelector('main').children);
 topLevelElems.push(document.querySelector('footer'));
 
@@ -83,4 +83,13 @@ function detectScroll()
     }
 
     lastScrollY = scrollY;
+}
+
+const menuButton = document.querySelector('#dropdown');
+const dropdownMenu = document.querySelector('.dropdown');
+menuButton.addEventListener('click', toggleDropDown)
+
+function toggleDropDown()
+{
+    dropdownMenu.classList.toggle('hidden');
 }
