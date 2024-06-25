@@ -247,9 +247,21 @@ div.intro > div
   /* margin-top: 20px; */
   margin-left: 55px;
   margin-right: 15px;
+  flex: 2;
 }
 
+div.intro > div.image
+{
+  flex: 2;
+}
 
+div.image
+{
+  width: 100%;
+  background-image: url('../images/portrait.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 /* Problems */
 /* .problems
