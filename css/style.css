@@ -239,28 +239,28 @@ nav > a.active
 div.intro
 {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   margin-bottom: var(--nav-height);
 } 
 
-div.intro > div
-{
-  /* margin-top: 20px; */
-  margin-left: 55px;
-  margin-right: 15px;
-  flex: 2;
-}
-
 div.intro > div.image
 {
-  flex: 2;
-}
-
-div.image
-{
+  min-height: 200px;
+  min-width: 170px;
   width: 100%;
   background-image: url('../images/portrait.jpg');
   background-repeat: no-repeat;
   background-size: contain;
+  flex:1;
+}
+
+div.intro > div
+{
+  /* margin-top: 20px; */
+  margin-left: 35px;
+  margin-right: 15px;
+  flex: 5;
 }
 
 /* Problems */
