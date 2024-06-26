@@ -27,8 +27,8 @@ section
 
 section
 {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .centered-txt
@@ -241,7 +241,6 @@ div.intro
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: var(--nav-height);
 } 
 
 div.intro > div.image
@@ -294,8 +293,8 @@ div.intro > div
   align-items: center;
   background-color: var(--light-gray);
   width: 100vw;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  /* padding-top: 60px;
+  padding-bottom: 40px; */
 }
 
 #about > *

@@ -6,32 +6,44 @@
     {
         display: none;
     }
+
+    :root {
+        --site-width: 90%;
+    }
 }
 
-/* Small devices 768px and down) */
-@media only screen and (width <  768px) 
-{
-    header > div > nav
+    /* Small devices 768px and down) */
+    @media only screen and (width <  768px) 
     {
-        display: none;
+        header > div > nav
+        {
+            display: none;
+        }
+
+        div.intro
+        {
+            flex-direction: column;
+        }
+
+        div.intro > div.image
+        {
+            order: 2;
+            min-height: 450px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 20px;   
+        }
+        
+        div.intro > div:nth-child(2)
+        {
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+
+
     }
-
-
-    div.intro
-    {
-        flex-direction: column;
-    }
-
-    div.intro > div.image
-    {
-        order: 2;
-        min-height: 450px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 20px;   
-    }
-
-}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
@@ -58,6 +70,10 @@
     {
         display: none;
     }
+
+    :root {
+        --site-width: 80%;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -68,5 +84,16 @@
     #images > a:nth-child(n + 4)
     {
         display: none;
+    }
+}
+
+
+/* A rule dedicated to really small screens to fix about image */
+/* Small devices 768px and down) */
+@media only screen and (width <  450px) 
+{
+    div.intro > div.image
+    {
+        min-height: 300px;
     }
 }
