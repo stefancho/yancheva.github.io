@@ -2,7 +2,10 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) 
 {
-
+    #images > a:nth-child(n + 2)
+    {
+        display: none;
+    }
 }
 
 /* Small devices 768px and down) */
@@ -30,8 +33,24 @@
 @media only screen and (min-width: 992px) 
 {
 
+}
 
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (width < 992px) 
+{
+    #images > a:nth-child(n + 3)
+    {
+        display: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+@media only screen and (width < 1200px) 
+{
+    #images > a:nth-child(n + 4)
+    {
+        display: none;
+    }
+}
