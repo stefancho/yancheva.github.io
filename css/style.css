@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(228, 143, 7);
+  --primary-color: #C0B7AE;
   --site-width: 70%;
   --light-gray: rgb(243, 243, 243);
   --nav-active-color: rgb(204, 127, 4);
@@ -325,13 +325,16 @@ div.intro > div
 .row
 {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: flex-start; */
 }
 .contact-info
 {
   margin-top: 30px;
   display: flex;
   align-items: center;
+  margin-right: 20px;
 }
 
 .cta-text
