@@ -252,6 +252,7 @@ div.intro > div.image
   background-image: url('../images/portrait.jpg');
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   flex:1;
 }
 
