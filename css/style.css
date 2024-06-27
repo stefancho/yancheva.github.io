@@ -79,18 +79,6 @@ section
   margin-bottom: 25px;
 }
 
-/* Intro section text */
-#intro
-{
-  padding-top: 110px;
-}
-
-.slogan
-{
-  color: var(--primary-color);
-  margin-top: 1.3em;
-}
-
 /* The logo */
 header a img
 {
@@ -256,9 +244,7 @@ nav > a.active
 {
   width: var(--site-width);
   color: white;
-  /* font-size: 2.2em; */
   font-family: 'Gentium';;
-  /* line-height: 1.15em; */
 }
 
 /* Intro picture */
@@ -289,29 +275,6 @@ div.intro > div
   flex: 5;
 }
 
-/* Problems */
-/* .problems
-{
-  margin-top: 12px;
-} */
-
-.panel
-{
-  border: 1px solid var(--darker-gray);
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-size: 1.06em;
-  background-color: rgb(255, 255, 255, 0.5);
-}
-
-.problem
-{
-  margin-top: 5px;
-}
-
 #about
 {
   display: flex;
@@ -326,23 +289,6 @@ div.intro > div
 #about > *
 {
   width: var(--site-width);
-}
-
-.panel-body
-{
-  border: 1px solid var(--darker-gray);
-  background-color: white;
-  /* animation: fadein-animation 1s; */
-}
-
-.panel-body img
-{
-  width: 400px;
-  height: auto;
-  float: left;
-  padding-right: 7px;
-  padding-bottom: 2px;
-  box-sizing: border-box;
 }
 
 /* Footer section */  
