@@ -235,6 +235,32 @@ nav > a.active
   }
 }
 
+/* Parallax effect */
+.parallax {
+  background-image: url("../images/nature.jpg");
+
+  width: 100%;
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.parallax p
+{
+  width: var(--site-width);
+  color: white;
+  font-size: 2.2em;
+  font-family: 'Gentium';;
+  line-height: 1.15em;
+}
+
 /* Intro picture */
 div.intro
 {
