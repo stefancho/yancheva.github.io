@@ -1,10 +1,10 @@
 :root {
   --primary-color: #C0B7AE;
-  --site-width: 70%;
+  --heading-color: #383533;
   --light-gray: rgb(243, 243, 243);
-  --nav-active-color: rgb(204, 127, 4);
+  --site-width: 70%;
+  --nav-active-color: rgb(161, 151, 135);
   --nav-hover-color: rgb(241, 225, 199);
-  --darker-gray: gainsboro;
   --nav-height: 60px;
 }
 
