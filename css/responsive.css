@@ -10,43 +10,48 @@
     :root {
         --site-width: 90%;
     }
+
+    section
+    {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
-    /* Small devices 768px and down) */
-    @media only screen and (width <  768px) 
+/* Small devices 768px and down) */
+@media only screen and (width <  768px) 
+{
+    header > div > nav
     {
-        header > div > nav
-        {
-            display: none;
-        }
-
-        div.intro
-        {
-            flex-direction: column;
-        }
-
-        div.intro > div.image
-        {
-            order: 2;
-            min-height: 450px;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 20px;   
-        }
-        
-        div.intro > div:nth-child(2)
-        {
-            text-align: center;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .parallax p
-        {
-            font-size: 1.3em;
-        }
-
+        display: none;
     }
+
+    div.intro
+    {
+        flex-direction: column;
+    }
+
+    div.intro > div.image
+    {
+        order: 2;
+        min-height: 450px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;   
+    }
+    
+    div.intro > div:nth-child(2)
+    {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .parallax p
+    {
+        font-size: 1.3em;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) 
@@ -56,6 +61,12 @@
         font-size: 1.6em;
         line-height: 1.1em;
     }
+
+    section
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -64,6 +75,12 @@
     .dropdown, #dropdown
     {
         display: none;
+    }
+
+    section
+    {
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 
