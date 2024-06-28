@@ -1,22 +1,3 @@
-
-// close/open issue panels
-const panels = document.querySelectorAll('.panel')
-for (panel of panels) {
-    panel.addEventListener('click', showHidePanel)
-}
-
-function showHidePanel(event)
-{
-    event.preventDefault();
-    const constainerDiv = event.target.closest('.problem')
-    const panelDiv = constainerDiv.querySelector('.panel-body')
-    panelDiv.classList.toggle("hidden");
-    const iconButtons = constainerDiv.querySelectorAll(".material-symbols-outlined");
-    for (const btnIcon of iconButtons) {
-        btnIcon.classList.toggle('hidden');
-    }
-}
-
 // Main menu navigation
 let currentActive = undefined;
 const mainLinks = document.querySelectorAll('nav > a');
@@ -54,8 +35,8 @@ function mainMenuClick(e)
 window.addEventListener('scroll', detectScroll);
 
 function isWithin(element, threshold) { 
-    console.log('iswithin');
-    console.log(element, currentActive);
+    // console.log('iswithin');
+    // console.log(element, currentActive);
     return element.offsetTop <= threshold && element.offsetTop + element.offsetHeight > threshold;
 } 
 
@@ -63,7 +44,7 @@ function detectScroll()
 {
     const scrollY = (window.scrollY || window.pageYOffSet) !== undefined ? (window.scrollY || window.pageYOffSet) : 0;
     const visibleThreshold = scrollY + NAV_HEIGHT;
-    console.log("threshold",visibleThreshold);
+    // console.log("threshold",visibleThreshold);
 
     if(!isValidSection(currentActive))
     {
@@ -97,14 +78,14 @@ function detectScroll()
 
 function getThresholdElement(screenY)
 {
-    console.log('start getThresholdElement');
+    // console.log('start getThresholdElement');
     for (const elem of topLevelElems) {
-        console.log(elem);
+        // console.log(elem);
         if(isWithin(elem, screenY)){
             return elem;
         }
     }
-    console.log('end getThresholdElement');
+    // console.log('end getThresholdElement');
     return undefined;
 }
 
