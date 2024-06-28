@@ -35,7 +35,7 @@ function mainMenuClick(e)
     const clickedLink = e.currentTarget;
     const fullHref = clickedLink.href;
     const href = fullHref.substring(fullHref.lastIndexOf('#'));
-    if(href.trim() !== '#')
+    if(href.trim().startsWith('#'))
     {
         const gotoElement = document.querySelector(href);
         console.log(gotoElement.offsetTop - NAV_HEIGHT + 1);
@@ -43,7 +43,7 @@ function mainMenuClick(e)
     }
     else
     {
-        window.scrollTo(0, 0);
+        window.open(fullHref)
     }
 }
 
