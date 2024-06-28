@@ -5,6 +5,11 @@ for (const buttonLink of mainLinks) {
     buttonLink.addEventListener('click', mainMenuClick);
 }
 
+const dropdownLinks = document.querySelectorAll('header > div.dropdown > a');
+for (const buttonLink of dropdownLinks) {
+    buttonLink.addEventListener('click', mainMenuClick);
+}
+
 lastScrollY = 0;
 NAV_HEIGHT = 60;
 const topLevelElems = [];
@@ -20,10 +25,13 @@ function mainMenuClick(e)
     const clickedLink = e.currentTarget;
     const fullHref = clickedLink.href;
     const href = fullHref.substring(fullHref.lastIndexOf('#'));
+    const isDropDown = clickedLink.parentElement.classList.contains('dropdown');
     if(href.trim() !== '#')
     {
         const gotoElement = document.querySelector(href);
-        console.log(gotoElement.offsetTop - NAV_HEIGHT + 1);
+        // console.log(gotoElement.offsetTop - NAV_HEIGHT + 1);
+        if(isDropDown)
+            dropdownMenu.classList.add('hidden');
         window.scrollTo({top: gotoElement.offsetTop - NAV_HEIGHT + 1, behavior: 'smooth'});
     }
     else
