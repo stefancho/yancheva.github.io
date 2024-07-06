@@ -25,7 +25,7 @@ function mainMenuClick(e)
     const isDropDown = clickedLink.parentElement.classList.contains('dropdown');
     if(fullHref.includes('home/') && href.trim().startsWith('#'))//link to home
     {
-        window.location.replace("/" + href);
+        window.location.replace("../index.html" + href);
     }
     else if(href.trim().startsWith('#'))//Link within the page
     {
