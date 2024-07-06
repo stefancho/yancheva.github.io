@@ -105,7 +105,23 @@ function nextPhoto(event) {
   currentIndex = nextIndex;
 }
 
+function galleryTimer()
+{
+  const hyperLinks = albumView.querySelectorAll('a');
+  for (const a of hyperLinks) {
+    if(!a.checkVisibility()){//rotate elents
+      const firstLink = hyperLinks[0];
+      firstLink.remove();
+      albumView.append(firstLink);
+      break;
+    }
+  }
 
+  setTimeout(galleryTimer, 4000);
+}
+
+
+setTimeout(galleryTimer, 4000);
 
 let currentIndex = null;
 const albumView = document.querySelector('#images');
