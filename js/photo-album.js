@@ -40,7 +40,7 @@ function onThumbnailClick(event) {
   appendImage(modalView, event.currentTarget.src);
 
   document.body.classList.add('no-scroll');
-  modalView.style.top = (window.scrollY || window.pageYOffSet) + 'px';
+  modalView.style.top = (window.scrollY || window.pageYOffSet) + (NAV_HEIGHT/2) + 'px';
   modalView.classList.remove('hidden');
 
   document.addEventListener('keydown', nextPhoto);

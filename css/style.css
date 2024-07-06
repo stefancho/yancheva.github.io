@@ -114,7 +114,7 @@ header a img
 
 #modal-view {
   position: absolute;
-  top: 0;
+  top: var(--nav-height);
   left: 0;
   height: 100vh;
   width: 100vw;
@@ -128,8 +128,8 @@ header a img
 #modal-view img {
   /* max-height: 100%;
   max-width: 100%; */
-  width: 500px;
-  height: 300px;
+  max-width: 80%;
+  height: auto;
 }
 
 #modal-view.hidden
