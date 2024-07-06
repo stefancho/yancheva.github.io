@@ -15,6 +15,10 @@ function mainMenuClick(e)
     e.preventDefault();
     const clickedLink = e.currentTarget;
     const fullHref = clickedLink.href;
+    const modalView = document.querySelector('#modal-view');
+    if(modalView && modalView.checkVisibility()){//gallery is open disable main menu
+        return;
+    }
     // if we dont' have # in the url href will be the fullHref
     const href = fullHref.substring(fullHref.lastIndexOf('#'));
     console.log("href: " + fullHref);

@@ -114,6 +114,12 @@
         font-size: 1.9em;
         line-height: 1.15em;
     }
+
+    p
+    {
+        font-size: 1.05em;
+        line-height: 26px;
+    }
 }
 
 @media only screen and (width < 1200px) 
@@ -132,5 +138,10 @@
     div.intro > div.image
     {
         min-height: 300px;
+    }
+
+    p
+    {
+        font-size: 0.95em;
     }
 }

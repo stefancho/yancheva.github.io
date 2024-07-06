@@ -118,7 +118,7 @@ header a img
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -344,6 +344,12 @@ div.intro > div
   width: var(--site-width);
 }
 
+#article
+{
+  padding-top: 100px;
+}
+
+
 /* Footer section */  
 
 .row
@@ -361,6 +367,20 @@ div.intro > div
   margin-right: 20px;
 }
 
+/* Publications */
+#footer ul li a
+{
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+#footer ul
+{
+  padding-top: 15px;
+  padding-bottom: 70px;
+}
+
+/* Common styles */
 .cta-text
 {
   margin-left: 15px;
@@ -403,4 +423,19 @@ div.intro > div
 .hidden
 {
   display: none;
+}
+
+.quote
+{
+  color: var(--heading-color);
+  font-size: 1.2em;
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#article > p 
+{
+  margin-bottom: 10px;
 }
