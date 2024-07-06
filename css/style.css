@@ -141,6 +141,34 @@ header a img
   overflow: hidden;
 }
 
+/* Image animation */
+.animate-prev {
+  animation: slide-from-left 0.5s;
+}
+
+@keyframes slide-from-left {
+  from {
+    margin-left: -30%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.animate-next {
+  animation: slide-from-right 0.5s;
+}
+
+@keyframes slide-from-right {
+  from {
+    margin-left: 30%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+
 /* Main menu */
  header{
   display: flex;
@@ -213,14 +241,39 @@ nav > a.active
 }
 
 @media (prefers-reduced-motion: reduce) {
-  
-  html {
-    scroll-behavior: auto;
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-  }
+
+
+  *, *:before, *:after {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+     
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+     
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    }
+
+    html
+    {
+      scroll-behavior: auto;
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+    }
 }
 
 /* Parallax effect */
@@ -351,4 +404,3 @@ div.intro > div
 {
   display: none;
 }
-

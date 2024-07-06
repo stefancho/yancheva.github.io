@@ -30,7 +30,9 @@ function mainMenuClick(e)
         if(isDropDown){
             dropdownMenu.classList.add('hidden');
         }
-        window.scrollTo({top: gotoElement.offsetTop - NAV_HEIGHT + 1, behavior: 'smooth'});
+        const transitionDisabled = window.getComputedStyle(document.querySelector('html')).transition.indexOf('none') !== -1;
+        const transitionBehaviour = (transitionDisabled) ? 'instant' : 'smooth';
+        window.scrollTo({top: gotoElement.offsetTop - NAV_HEIGHT + 1, behavior: transitionBehaviour});
     }
     else//links to publications page
     {

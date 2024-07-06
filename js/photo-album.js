@@ -32,6 +32,7 @@ function appendImage(container, imgSrc) {
   container.appendChild(prevArrow)
   container.appendChild(image);
   container.appendChild(nextArrow);
+  return image;
 }
 
 function onThumbnailClick(event) {
@@ -79,10 +80,15 @@ function nextPhoto(event) {
   }
 
   let nextIndex = currentIndex;
-  if (event.key === 'ArrowLeft') {
-    nextIndex--;
+  const previous = event.key === 'ArrowLeft';
+  if (previous) {
+    if(nextIndex-- === 0){
+      nextIndex = PHOTO_LIST.length - 1;
+    }
   } else {
-    nextIndex++;
+    if(nextIndex++ === PHOTO_LIST.length -1){
+      nextIndex = 0;
+    }
   }
 
   if (nextIndex < 0 || nextIndex == PHOTO_LIST.length) {
@@ -90,7 +96,12 @@ function nextPhoto(event) {
   }
   const photoSrc = PHOTO_LIST[nextIndex];
   modalView.innerHTML = '';
-  appendImage(modalView, photoSrc);
+  const img = appendImage(modalView, photoSrc);
+  if (previous) {
+    img.classList.add('animate-next');
+  } else {
+    img.classList.add('animate-prev');
+  }
   currentIndex = nextIndex;
 }
 
