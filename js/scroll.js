@@ -1,17 +1,4 @@
-// Main menu navigation
-let currentActive = undefined;
-const mainLinks = document.querySelectorAll('nav > a');
-for (const buttonLink of mainLinks) {
-    buttonLink.addEventListener('click', mainMenuClick);
-}
-
-const dropdownLinks = document.querySelectorAll('header > div.dropdown > a');
-for (const buttonLink of dropdownLinks) {
-    buttonLink.addEventListener('click', mainMenuClick);
-}
-
 lastScrollY = 0;
-NAV_HEIGHT = 60;
 const topLevelElems = [];
 topLevelElems.push(document.querySelector('#intro'));
 topLevelElems.push(document.querySelector('#about'));
@@ -19,36 +6,8 @@ topLevelElems.push(document.querySelector('#therapy'));
 topLevelElems.push(document.querySelector('#gallery'));
 topLevelElems.push(document.querySelector('footer'));
 
-function mainMenuClick(e)
-{
-    e.preventDefault();
-    const clickedLink = e.currentTarget;
-    const fullHref = clickedLink.href;
-    const href = fullHref.substring(fullHref.lastIndexOf('#'));
-    const isDropDown = clickedLink.parentElement.classList.contains('dropdown');
-    if(href.trim().startsWith('#'))
-
-    {
-        const gotoElement = document.querySelector(href);
-        // console.log(gotoElement.offsetTop - NAV_HEIGHT + 1);
-        if(isDropDown){
-            dropdownMenu.classList.add('hidden');
-        }
-        window.scrollTo({top: gotoElement.offsetTop - NAV_HEIGHT + 1, behavior: 'smooth'});
-    }
-    else
-    {
-        window.open(fullHref)
-    }
-}
 
 window.addEventListener('scroll', detectScroll);
-
-function isWithin(element, threshold) { 
-    // console.log('iswithin');
-    // console.log(element, currentActive);
-    return element.offsetTop <= threshold && element.offsetTop + element.offsetHeight > threshold;
-} 
 
 function detectScroll()
 {
@@ -86,6 +45,12 @@ function detectScroll()
     lastScrollY = scrollY;
 }
 
+function isWithin(element, threshold) { 
+    // console.log('iswithin');
+    // console.log(element, currentActive);
+    return element.offsetTop <= threshold && element.offsetTop + element.offsetHeight > threshold;
+} 
+
 function getThresholdElement(screenY)
 {
     // console.log('start getThresholdElement');
@@ -102,13 +67,4 @@ function getThresholdElement(screenY)
 function isValidSection(sectionIndex)
 {
     return sectionIndex >= 0 && sectionIndex < topLevelElems.length;
-}
-
-const menuButton = document.querySelector('#dropdown');
-const dropdownMenu = document.querySelector('.dropdown');
-menuButton.addEventListener('click', toggleDropDown)
-
-function toggleDropDown()
-{
-    dropdownMenu.classList.toggle('hidden');
 }
