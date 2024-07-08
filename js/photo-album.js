@@ -11,19 +11,15 @@ function createHyperLink(href) {
 }
 
 function createArrow(nextArrow){
-  const span = document.createElement('span');
-  span.classList.add('material-symbols-outlined');
-  span.classList.add('white-text');
-  span.classList.add('pointer');
-
-  textContent = null;
+  const img = document.createElement('img');
+  img.classList.add('pointer');
   if(nextArrow) {
-    span.textContent = "arrow_forward";
+    img.src = "./images/icons/arrow_forward.svg";
   }
   else {
-    span.textContent = "arrow_back";
+    img.src = "./images/icons/arrow_back.svg";
   }
-  return span;
+  return img;
 }
 // Appends image with imgSrc along with forward and backward arrows
 function appendImage(container, imgSrc) {
