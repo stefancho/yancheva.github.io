@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #C0B7AE;
-  --heading-color: #383533;
+  --primary-color: rgb(230, 205, 167);
+  --heading-color: #534d49;
   --light-gray: rgb(243, 243, 243);
   --site-width: 70%;
-  --nav-active-color: rgb(161, 151, 135);
-  --nav-hover-color: rgb(241, 225, 199);
+  --nav-active-color: rgb(204, 182, 146);
+  --nav-hover-color: rgb(248, 240, 228);
   --nav-height: 60px;
 }
 
