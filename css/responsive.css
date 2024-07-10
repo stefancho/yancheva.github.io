@@ -16,6 +16,15 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
+
+    h1
+    {
+        font-size: 2em;
+    }
+    h2
+    {
+        font-size: 1.8em;
+    }
 }
 
 /* Small devices 768px and down) */
@@ -47,6 +56,11 @@
         margin-right: 0;
     }
 
+    div.intro div p
+    {
+    font-size: 1em;
+    }
+
     .parallax p
     {
         font-size: 1.3em;
@@ -58,8 +72,8 @@
 {
     .parallax p
     {
-        font-size: 1.6em;
-        line-height: 1.1em;
+        font-size: 1.55em;
+        line-height: 1.15em;
     }
 
     section
@@ -89,7 +103,7 @@
 {
     .parallax p
     {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
 }
 
@@ -111,7 +125,7 @@
 {
     .parallax p
     {
-        font-size: 1.9em;
+        font-size: 1.7em;
         line-height: 1.15em;
     }
 
@@ -143,5 +157,15 @@
     p
     {
         font-size: 0.95em;
+    }
+}
+
+/* A rule dedicated to really small screens to fix about image */
+/* Small devices 768px and down) */
+@media only screen and (width <  375px) 
+{
+    .parallax p
+    {
+        font-size: 1.1em;
     }
 }

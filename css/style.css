@@ -325,6 +325,11 @@ div.intro > div
   flex: 5;
 }
 
+div.intro div p
+{
+  font-size: 1.1em;
+}
+
 #about
 {
   display: flex;
