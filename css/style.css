@@ -190,7 +190,9 @@ nav > a {
   font-size: 1.1em;
   /* font-style: italic; */
   color: white;
-  margin-left: 12px;
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav > a:hover {
@@ -198,10 +200,9 @@ nav > a:hover {
 }
 
 nav > a.active
-{
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 3px;
+{ 
+  padding-bottom: 7px;
+  padding-top: 5px;
   border-radius: 6px;
   background-color: var(--nav-active-color);
 }
@@ -295,6 +296,7 @@ nav > a.active
   width: var(--site-width);
   color: white;
   font-family: Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Intro picture */

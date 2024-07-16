@@ -1,8 +1,8 @@
 NAV_HEIGHT = 60;
 
 const PHOTO_LIST = [
-    'images/frenchbread.jpg',
-    'images/neapolitan.jpg',
-    'images/nypizza.jpg',
-    'images/squarepan.jpg'
+  'images/first.jpg',
+  'images/second.jpg',
+  'images/third.jpg',
+  'images/fourth.jpg'
   ];

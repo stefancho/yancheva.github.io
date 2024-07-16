@@ -118,6 +118,17 @@
     :root {
         --site-width: 80%;
     }
+
+    nav > a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .parallax p
+    {
+        font-size: 1.6em;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -162,7 +173,7 @@
 
 /* A rule dedicated to really small screens to fix about image */
 /* Small devices 768px and down) */
-@media only screen and (width <  375px) 
+@media only screen and (width <  425px) 
 {
     .parallax p
     {
